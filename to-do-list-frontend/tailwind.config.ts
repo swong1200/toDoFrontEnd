@@ -11,8 +11,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        gray: "#1A1A1A"
-
+        gray: "#1A1A1A",
+        taskbutton: "#1E6F9F"
       },
     },
   },
