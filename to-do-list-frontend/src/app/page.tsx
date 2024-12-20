@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import CreateButton from './components/CreateButton';
+import TaskDiv from './components/TaskDiv';
 
 export default function Home() {
   return (
@@ -7,8 +8,9 @@ export default function Home() {
       <div className="bg-black w-screen flex flex-col items-center justify-center min-h-52">
         <Header />
       </div>
-      <div className="flex justify-center bg-gray min-h-screen w-screen">
+      <div className="flex flex-col items-center bg-gray min-h-screen w-screen">
         <CreateButton />
+        <TaskDiv />
       </div>
     </main>
   );
