@@ -1,157 +1,35 @@
 import React from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 type Props = {};
 
 export default function CreateButton({}: Props) {
-  //     const style = {
-  //         /* New Task */
-
-  // /* Auto layout */
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  // padding: 0px;
-  // gap: 8px;
-
-  // position: absolute;
-  // width: 736px;
-  // height: 52px;
-  // left: calc(50% - 736px/2);
-  // top: 173px;
-
-  // /* Button */
-
-  // /* Auto layout */
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: center;
-  // align-items: center;
-  // padding: 16px;
-  // gap: 8px;
-
-  // width: 736px;
-  // height: 52px;
-
-  // /* Blue Dark */
-  // background: #1E6F9F;
-  // border-radius: 8px;
-
-  // /* Inside auto layout */
-  // flex: none;
-  // order: 0;
-  // flex-grow: 1;
-
-  // /* Criar */
-
-  // width: 82px;
-  // height: 20px;
-
-  // font-family: 'Inter';
-  // font-style: normal;
-  // font-weight: 700;
-  // font-size: 14px;
-  // line-height: 140%;
-  // /* identical to box height, or 20px */
-
-  // /* Gray 100 */
-  // color: #F2F2F2;
-
-  // /* Inside auto layout */
-  // flex: none;
-  // order: 0;
-  // flex-grow: 0;
-
-  // /* plus */
-
-  // width: 16px;
-  // height: 16px;
-
-  // /* Inside auto layout */
-  // flex: none;
-  // order: 1;
-  // flex-grow: 0;
-
-  // /* Layer 2 */
-
-  // position: absolute;
-  // left: 0.2%;
-  // right: 0%;
-  // top: 0%;
-  // bottom: 0.2%;
-
-  // /* Layer 1 */
-
-  // position: absolute;
-  // left: 0.2%;
-  // right: 0%;
-  // top: 0%;
-  // bottom: 0.2%;
-
-  // /* Vector */
-
-  // position: absolute;
-  // left: 7.62%;
-  // right: 7.64%;
-  // top: 7.62%;
-  // bottom: 7.64%;
-
-  // /* Vector */
-
-  // position: absolute;
-  // left: 0.2%;
-  // right: 0%;
-  // top: 0%;
-  // bottom: 0.2%;
-
-  // /* Gray 100 */
-  // background: #F2F2F2;
-
-  // /* Vector */
-  // position: absolute;
-  // left: 26.24%;
-  // right: 26.83%;
-  // top: 26.06%;
-  // bottom: 27.04%;
-
-  // /* Gray 100 */
-  // background: #F2F2F2;
-
-  //     }
   return (
     <div>
-      <button className="flex flex-row w-3/4 h-20 bg-taskbutton rounded-lg -mt-10 text-white">
-      Create Task
+      <Link
+        href="/newtask"
+        className="flex flex-row w-3/4 h-20 bg-taskbutton rounded-lg -mt-10 text-white"
+      >
+        Create Task
         <svg
-          width="736"
-          height="52"
-          viewBox="0 0 736 52"
+          width="16"
+          height="16"
+          viewBox="0 0 16 16"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          
-          
-          <g clipPath="url(#clip0_1_213)">
-            <path
-              d="M412.984 19.4516C414.276 19.4516 415.539 19.8347 416.613 20.5524C417.687 21.2702 418.524 22.2904 419.019 23.484C419.513 24.6775 419.642 25.9909 419.39 27.258C419.138 28.5251 418.516 29.689 417.603 30.6026C416.689 31.5161 415.525 32.1382 414.258 32.3903C412.991 32.6423 411.678 32.5129 410.484 32.0185C409.29 31.5241 408.27 30.6869 407.552 29.6127C406.835 28.5385 406.452 27.2756 406.452 25.9837C406.458 24.2533 407.149 22.5957 408.372 21.3722C409.596 20.1486 411.253 19.4583 412.984 19.4516ZM412.984 18C411.406 18.0065 409.866 18.4802 408.557 19.3613C407.249 20.2425 406.23 21.4916 405.631 22.951C405.032 24.4104 404.878 26.0146 405.19 27.5611C405.502 29.1077 406.265 30.5272 407.383 31.6404C408.5 32.7537 409.923 33.5108 411.471 33.8162C413.019 34.1217 414.622 33.9617 416.079 33.3564C417.536 32.7512 418.781 31.7279 419.657 30.4158C420.533 29.1036 421 27.5613 421 25.9837C421 24.9325 420.792 23.8917 420.389 22.9209C419.986 21.9501 419.395 21.0686 418.65 20.3268C417.905 19.585 417.021 18.9976 416.049 18.5983C415.077 18.199 414.035 17.9957 412.984 18Z"
-              fill="#F2F2F2"
-            />
-            <path
-              d="M416.707 25.3813H413.495V22.1696H412.414V25.3813H409.199V26.4627H412.414V29.6743H413.495V26.4627H416.707V25.3813Z"
-              fill="#F2F2F2"
-            />
-          </g>
-          <defs>
-            <clipPath id="clip0_1_213">
-              <rect
-                width="16"
-                height="16"
-                fill="white"
-                transform="translate(405 18)"
-              />
-            </clipPath>
-          </defs>
+          <path
+            d="M7.98367 1.45157C9.27559 1.45157 10.5385 1.83467 11.6127 2.55243C12.6869 3.27019 13.5241 4.29036 14.0185 5.48394C14.5129 6.67753 14.6423 7.99091 14.3902 9.25802C14.1382 10.5251 13.5161 11.689 12.6026 12.6026C11.689 13.5161 10.5251 14.1382 9.25801 14.3902C7.99091 14.6423 6.67753 14.5129 5.48394 14.0185C4.29036 13.5241 3.27018 12.6869 2.55243 11.6127C1.83467 10.5385 1.45157 9.27559 1.45157 7.98367C1.45826 6.25331 2.14861 4.59573 3.37217 3.37217C4.59573 2.14861 6.25331 1.45826 7.98367 1.45157ZM7.98367 -1.85292e-06C6.40605 0.00645208 4.86572 0.480166 3.55711 1.36134C2.24851 2.24251 1.2303 3.49163 0.631045 4.95101C0.031785 6.41039 -0.121666 8.01461 0.190064 9.56113C0.501794 11.1077 1.26473 12.5271 2.38256 13.6404C3.50038 14.7537 4.92298 15.5108 6.47076 15.8162C8.01855 16.1217 9.62212 15.9617 11.079 15.3564C12.536 14.7512 13.7809 13.7279 14.6567 12.4157C15.5326 11.1036 16 9.56129 16 7.98367C16 6.93248 15.7924 5.89165 15.3892 4.92089C14.9859 3.95013 14.3949 3.06856 13.6501 2.32678C12.9053 1.585 12.0213 0.99761 11.0489 0.598319C10.0765 0.199028 9.03484 -0.00430215 7.98367 -1.85292e-06Z"
+            fill="#F2F2F2"
+          />
+          <path
+            d="M11.7069 7.38126H8.49534V4.16965H7.41391V7.38126H4.19867V8.46268H7.41391V11.6743H8.49534V8.46268H11.7069V7.38126Z"
+            fill="#F2F2F2"
+          />
         </svg>
-      </button>
+      </Link>
+      <button></button>
     </div>
   );
 }

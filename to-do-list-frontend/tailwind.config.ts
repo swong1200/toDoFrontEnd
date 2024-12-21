@@ -12,7 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         gray: "#1A1A1A",
-        taskbutton: "#1E6F9F"
+        taskbutton: "#1E6F9F",
+        commonBlue: "#4EA8DE"
+
       },
     },
   },
