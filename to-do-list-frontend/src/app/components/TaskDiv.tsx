@@ -1,6 +1,7 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import route from '../api/route';
+import TaskCard from './TaskCard';
 
 type Props = {};
 
@@ -30,15 +31,14 @@ export default function TaskDiv({}: Props) {
     return (
     
       <div className="w-max flex flex-col items-center">
-        <div className='flex justify-between text-white w-max'>
+        <div className="grid grid-cols-2 gap-96 text-white">
           <p>Tasks</p>
           <p>Completed</p>
         </div>
         <div className='text-white'>
             {data && data.map((task)=> {
                 return (
-
-                    <p key={task.id}>{task.title}</p>
+                    <TaskCard key={task.id} title={task.title}/>
                 )
             })}
         </div>
