@@ -38,7 +38,7 @@ export default function TaskDiv({}: Props) {
         <div className='text-white'>
             {data && data.map((task)=> {
                 return (
-                    <TaskCard key={task.id} title={task.title}/>
+                    <TaskCard key={task.id} title={task.title} id={task.id} />
                 )
             })}
         </div>

@@ -1,10 +1,20 @@
 import React from 'react';
+import route from '../api/route';
 
 type Props = {
-    title: string
+    title: string,
+    key: number,
+    id: number
 };
 
-export default function TaskCard({title}: Props) {
+const handleDelete = (id: number)=> {
+    const idString = id.toString();
+    route.removeTask(idString);
+    let currentLocation = window.origin;   
+    window.location.href = currentLocation
+}
+
+export default function TaskCard({title, id}: Props) {
   return (
     <div className="flex flex-col">
       <div className="flex">
@@ -16,6 +26,8 @@ export default function TaskCard({title}: Props) {
           viewBox="0 0 13 14"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
+          className='cursor-pointer'
+          onClick={()=> handleDelete(id)}
         >
           <path
             d="M8.20211 4.98547H6.87155V10.5073H8.20211V4.98547Z"

@@ -8,5 +8,8 @@ export default {
     },
     createTask: function (data: any) {
         return axios.post(URL + "task", data)
+    },
+    removeTask: function (id: string) {
+        return axios.delete(URL + "task/" + id)
     }
 }
